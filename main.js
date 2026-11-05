@@ -12,3 +12,9 @@ function calculateAverage(data) {
     const totalScore = data.reduce((sum, student) => sum + student.score, 0);
     return totalScore / data.length;
 }
+
+//3 Prog(Anna): Поиск студента с максимальным баллом.
+function findTopStudent(data) {
+    const top = data.reduce((max, student) => student.score > max.score ? student : max, data[0]);
+    return top.name + " (" + top.score + ")";
+}

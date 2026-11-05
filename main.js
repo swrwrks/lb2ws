@@ -1,0 +1,14 @@
+//1. Данные
+const grades = [
+    { name: "Макар", score: 85 },
+    { name: "Денис", score: 92 },
+    { name: "Анна", score: 78 },
+    { name: "Даша", score: 88 },
+    { name: "Студент_X", score: 45 }
+];
+
+//2 Prog(Denis): Вычисление среднего балла.
+function calculateAverage(data) {
+    const totalScore = data.reduce((sum, student) => sum + student.score, 0);
+    return totalScore / data.length;
+}

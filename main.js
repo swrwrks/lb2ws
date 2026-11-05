@@ -18,3 +18,8 @@ function findTopStudent(data) {
     const top = data.reduce((max, student) => student.score > max.score ? student : max, data[0]);
     return top.name + " (" + top.score + ")";
 }
+
+//4 Prog(Dasha): Фильтрация должников. 
+function filterFailed(data, passScore = 60)  {
+    return data.filter(student => student.score < passScore).map(student => student.name);
+}

@@ -23,3 +23,12 @@ function findTopStudent(data) {
 function filterFailed(data, passScore = 60)  {
     return data.filter(student => student.score < passScore).map(student => student.name);
 }
+
+//5 Prog(X): Добавление буквенной оценки.
+function addLetterGrade(data) {
+    return data.map(student => {
+        if (student.score >= 90) return "A";
+        if (student.score >= 75) return "B";
+        return "C";
+    });
+}
